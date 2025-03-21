@@ -1,0 +1,8 @@
+body {
+    --base-color:#f1eac3;
+    --main-color:#592305;
+    --accent-color:#94c674;
+    font-size: 100%;
+    background-color: var(--base-color);
+    margin: 0;
+}
