@@ -1,7 +1,7 @@
 import { TextField } from '@mui/material'
 import React from 'react'
 
-const InputTitle = () => {
+const InputTitle = ({inputTitleStyle}) => {
   return (
     <div>
       <TextField
@@ -10,12 +10,7 @@ const InputTitle = () => {
         placeholder='ここにタイトルを入力'
         variant='filled'
         color='warning'
-        sx={{
-          bgcolor: 'white',
-          borderRadius: '5px',
-          width: {md:'auto', lg:'300px'},
-          height: '55px',
-        }}
+        sx={inputTitleStyle}
       />
     </div>
   )
