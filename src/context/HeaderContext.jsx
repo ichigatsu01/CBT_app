@@ -1,11 +1,11 @@
 import React, { createContext, useState } from 'react'
 
-const DisplayContext = createContext();
+const HeaderContext = createContext();
 
-export function DisplayProvider({children}) {
+export function HeaderProvider({children}) {
     const [isHelpOpen, setIsHelpOpen] = useState(false); //ヘルプ開閉ボタン
     const [isHamburgerOpen, setIsHamburgerOpen] = useState(false); //ヘッダー開閉ボタン
-    const [selectSideBarIndex, setSelectSideBarIndex] = useState(0);
+    // const [selectSideBarIndex, setSelectSideBarIndex] = useState(0);
     const btnStyle = {
         bgcolor: '#43a047',
         transition: 'all 0.5s ease',
@@ -13,6 +13,10 @@ export function DisplayProvider({children}) {
         '&:hover': {
         bgcolor: '#2e7d32',
         }
+    }
+    const clearBtnStyle = {
+        transition: 'all 0.5s ease',
+        height: '50px',
     }
     const inputTitleStyle = {
         bgcolor: 'white',
@@ -31,14 +35,14 @@ export function DisplayProvider({children}) {
     }
 
     return (
-    <DisplayContext.Provider
+    <HeaderContext.Provider
         value={{isHelpOpen, setIsHelpOpen, isHamburgerOpen, setIsHamburgerOpen, btnStyle,
-            inputTitleStyle, inputDateStyle, hambugerBtnStyle, selectSideBarIndex, setSelectSideBarIndex
+            inputTitleStyle, inputDateStyle, hambugerBtnStyle, clearBtnStyle,
         }}
     >
         {children}
-    </DisplayContext.Provider>
+    </HeaderContext.Provider>
     )
 }
 
-export default DisplayContext
+export default HeaderContext

@@ -1,11 +1,10 @@
 import React, { useContext } from 'react'
 import { Button } from '@mui/material';
 import HelpIcon from '@mui/icons-material/Help';
-import HelpText from './HelpText';
-import DisplayContext from '../../../context/DisplayContext';
+import HeaderContext from '../../../context/HeaderContext';
 
 const HelpBtn = ({btnStyle}) => {
-  const {isHelpOpen, setIsHelpOpen} = useContext(DisplayContext);
+  const {isHelpOpen, setIsHelpOpen} = useContext(HeaderContext);
   return (
     <>
       <Button
@@ -15,7 +14,6 @@ const HelpBtn = ({btnStyle}) => {
       >
         <HelpIcon sx={{ mr:1 }} />ヘルプ
       </Button>
-      {/* {isHelpOpen ? <HelpText /> : ""} */}
     </>
   )
 }

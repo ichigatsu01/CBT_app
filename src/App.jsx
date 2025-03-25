@@ -4,12 +4,12 @@ import WorkSpace from './components/workspace/WorkSpace';
 import HelpText from './components/header/header-function/HelpText';
 import HeaderHamburgerMenu from './components/header/hamburger-menu/HeaderHamburgerMenu';
 import { Stack } from '@mui/material';
+import WriteContentClearConfirm from './components/workspace/writing-area/WriteContentClearConfirm';
 
 function App() {
 
   return (
     <>
-    {/* たぶんここでheaderとworkspaceをstackで囲んで割合を調整する必要があるっぽい */}
       <Stack
         direction={'column'}
         sx={{
@@ -21,6 +21,7 @@ function App() {
         <WorkSpace sx={{flex:'0.8'}} />
       </Stack>
       <HelpText />
+      <WriteContentClearConfirm />
       <HeaderHamburgerMenu />
     </>
   )

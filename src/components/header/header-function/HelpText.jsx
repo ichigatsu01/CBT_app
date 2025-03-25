@@ -1,9 +1,9 @@
 import { Button, Dialog, DialogActions, DialogTitle, List, ListItem } from '@mui/material'
 import React, { useContext } from 'react'
-import DisplayContext from '../../../context/DisplayContext'
+import HeaderContext from '../../../context/HeaderContext'
 
 const HelpText = () => {
-  const {isHelpOpen, setIsHelpOpen} = useContext(DisplayContext);
+  const {isHelpOpen, setIsHelpOpen} = useContext(HeaderContext);
   return (
     <Dialog open={isHelpOpen} onClose={() => setIsHelpOpen(false)}>
       <DialogTitle>記入の際の参考にしてください：</DialogTitle>

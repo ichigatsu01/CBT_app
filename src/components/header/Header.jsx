@@ -8,10 +8,10 @@ import InputTitle from './header-input/InputTitle'
 import InputDateCreated from './header-input/InputDateCreated'
 import InputDateHappend from './header-input/InputDateHappend'
 import HeaderHamburgerBtn from './hamburger-menu/HeaderHamburgerBtn'
-import DisplayContext from '../../context/DisplayContext'
+import HeaderContext from '../../context/HeaderContext'
 
 const Header = () => {
-  const {btnStyle, inputTitleStyle, inputDateStyle, hambugerBtnStyle} = useContext(DisplayContext);
+  const {btnStyle, inputTitleStyle, inputDateStyle, hambugerBtnStyle, clearBtnStyle} = useContext(HeaderContext);
 
   return (
     <header id='header'>
@@ -49,7 +49,7 @@ const Header = () => {
           >
               <SaveBtn btnStyle={btnStyle}/>
               <LoadBtn btnStyle={btnStyle} />
-              <ClearBtn btnStyle={btnStyle} />
+              <ClearBtn btnStyle={clearBtnStyle} />
               <HelpBtn btnStyle={btnStyle} />
           </Stack>
           <Stack //hamburgerMenu...md未満の画面サイズで表示

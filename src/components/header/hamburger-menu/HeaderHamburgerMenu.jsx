@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
-import DisplayContext from '../../../context/DisplayContext'
-import { Box, Divider, Stack, SwipeableDrawer } from '@mui/material';
+import HeaderContext from '../../../context/HeaderContext'
+import { Box, Stack, SwipeableDrawer } from '@mui/material';
 import SaveBtn from '../header-function/SaveBtn';
 import LoadBtn from '../header-function/LoadBtn';
 import ClearBtn from '../header-function/ClearBtn';
@@ -10,7 +10,7 @@ import InputDateCreated from '../header-input/InputDateCreated';
 import InputDateHappend from '../header-input/InputDateHappend';
 
 const HeaderHamburgerMenu = () => {
-    const {isHamburgerOpen, setIsHamburgerOpen, btnStyle, inputTitleStyle, inputDateStyle } = useContext(DisplayContext);
+    const {isHamburgerOpen, setIsHamburgerOpen, btnStyle, inputTitleStyle, inputDateStyle } = useContext(HeaderContext);
   return (
     <div>
         {/* {isHamburgerOpen ? 'ダブルチーズバーガーたべたい': ''} */}
