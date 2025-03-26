@@ -10,7 +10,7 @@ import InputDateCreated from '../header-input/InputDateCreated';
 import InputDateHappend from '../header-input/InputDateHappend';
 
 const HeaderHamburgerMenu = () => {
-    const {isHamburgerOpen, setIsHamburgerOpen, btnStyle, inputTitleStyle, inputDateStyle } = useContext(HeaderContext);
+    const {isHamburgerOpen, setIsHamburgerOpen, btnStyle, inputTitleStyle, inputDateStyle, clearBtnStyle } = useContext(HeaderContext);
   return (
     <div>
         {/* {isHamburgerOpen ? 'ダブルチーズバーガーたべたい': ''} */}
@@ -32,7 +32,7 @@ const HeaderHamburgerMenu = () => {
                 >
                     <SaveBtn btnStyle={btnStyle}/>
                     <LoadBtn btnStyle={btnStyle} />
-                    <ClearBtn btnStyle={btnStyle} />
+                    <ClearBtn clearBtnStyle={clearBtnStyle} />
                     <HelpBtn btnStyle={btnStyle} />
                 </Stack>
             </Box>

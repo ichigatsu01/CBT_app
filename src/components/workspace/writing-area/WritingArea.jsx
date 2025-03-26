@@ -27,7 +27,7 @@ const WritingArea = () => {
     },
   }
   const writingAreaLists = {
-    0: <WritingAreaContent0 selectSideBarIndex={selectSideBarIndex} textFieldStyle={textFieldStyle}/>,
+    0: <WritingAreaContent0 textFieldStyle={textFieldStyle}/>,
     1: <WritingAreaContent1 textFieldStyle={textFieldStyle} />,
     2: <WritingAreaContent2 textFieldStyle={textFieldStyle} />,
     3: <WritingAreaContent3 textFieldStyle={textFieldStyle} />,

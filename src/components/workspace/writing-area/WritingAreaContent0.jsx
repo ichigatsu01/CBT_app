@@ -2,9 +2,9 @@ import { Box, Button, Stack, TextField } from '@mui/material'
 import React, { useContext } from 'react'
 import WorkSpaceContext from '../../../context/WorkSpaceContext'
 
-const WritingAreaContent0 = ({textFieldStyle, selectSideBarIndex}) => {
+const WritingAreaContent0 = ({ textFieldStyle }) => {
   const {writeContents, setWriteContents,
-    isOpenWriteContentBtn, setIsOpenWriteContentBtn,
+    isOpenWriteContentClearBtn, setIsOpenWriteContentClearBtn, selectSideBarIndex
   } = useContext(WorkSpaceContext);
 
   return (
@@ -25,7 +25,7 @@ const WritingAreaContent0 = ({textFieldStyle, selectSideBarIndex}) => {
       <Button
         variant='contained'
         color='warning'
-        onClick={() => setIsOpenWriteContentBtn(!isOpenWriteContentBtn)}
+        onClick={() => setIsOpenWriteContentClearBtn(!isOpenWriteContentClearBtn)}
         sx={{
           fontSize:'1rem',
         }}
