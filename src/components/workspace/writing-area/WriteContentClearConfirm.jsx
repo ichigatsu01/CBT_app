@@ -14,8 +14,10 @@ const WriteContentClearConfirm = () => {
     <Dialog
         open={isOpenWriteContentClearBtn}
         onClose={() => setIsOpenWriteContentClearBtn(false)}
+        //下二行はスクリーンリーダー対応みたいなもの。
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
+        disableEnforceFocus
     >
         <DialogContent>
             <DialogContentText>
