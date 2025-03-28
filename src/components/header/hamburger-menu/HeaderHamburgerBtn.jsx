@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import MenuIcon from '@mui/icons-material/Menu';
+import WidgetsIcon from '@mui/icons-material/Widgets';
 import { IconButton } from '@mui/material';
 import HeaderContext from '../../../context/HeaderContext';
 
@@ -8,7 +8,7 @@ const HeaderHamburgerBtn = ({hambugerBtnStyle}) => {
 
   return (
     <IconButton sx={hambugerBtnStyle} onClick={() => setIsHamburgerOpen(!isHamburgerOpen)}>
-        <MenuIcon fontSize='large'/>
+        <WidgetsIcon fontSize='large'/>
     </IconButton>
   )
 }

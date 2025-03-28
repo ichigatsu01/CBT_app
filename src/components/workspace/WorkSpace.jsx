@@ -10,13 +10,15 @@ const WorkSpace = () => {
       sx={{
         height:'85%',
         width:'100%',
-        margin:'10px 20px',
+        margin:'10px 0',
       }}
     >
-      <Box sx={{flex:'0.2'}}>
+      <Box sx={{display:{xs:'none', md:'block'}, flex:{xs:'0', md:'0.2'}}}>
         <SideBar />
       </Box>
-      <Box sx={{flex:'0.8'}}>
+      <Box
+      sx={{flex:{xs:'1', md:'0.8'}}}
+      >
         <WritingArea />
       </Box>
     </Stack>

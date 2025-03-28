@@ -15,9 +15,11 @@ const SideBar = () => {
     <Stack
       direction={'column'}
       sx={{
-      height:'100%',
-      justifyContent:'space-evenly',
-    }}>
+        height:'100%',
+        justifyContent:'space-evenly',
+        px:'20px',
+      }}
+    >
       {sideBarLists.map((list, index) => {
         const isSelected = index === selectSideBarIndex; //ボタンが選ばれている場合、色を変更
         return (

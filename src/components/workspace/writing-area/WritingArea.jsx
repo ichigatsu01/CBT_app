@@ -37,7 +37,14 @@ const WritingArea = () => {
   }
 
   return (
-    <Stack direction='column' sx={{height:'100%', width:'90%', marginLeft:'20px'}}>
+    <Stack
+      direction='column'
+      sx={{
+        height:'100%',
+        width:{xs:'90%', md:'90%'},
+        mx:{xs:'auto', md:'0'}
+      }}
+    >
       {writingAreaLists[selectSideBarIndex]}
     </Stack>
   )

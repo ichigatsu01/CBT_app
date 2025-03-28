@@ -6,6 +6,7 @@ import HeaderHamburgerMenu from './components/header/hamburger-menu/HeaderHambur
 import { Stack } from '@mui/material';
 import WriteContentClearConfirm from './components/workspace/writing-area/WriteContentClearConfirm';
 import EmotionExampleText from './components/workspace/writing-area/EmotionExampleText';
+import SideBarHamburgerMenu from './components/workspace/side-bar/SideBarHamburgerMenu';
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
 
       {/* 以下xs画面で表示するハンバーガーメニュー、サイドバーメニュー */}
       <HeaderHamburgerMenu />
+      <SideBarHamburgerMenu />
     </>
   )
 }

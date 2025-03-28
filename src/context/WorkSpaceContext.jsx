@@ -44,12 +44,16 @@ export const WorkSpaceProvider = ({children}) => {
       setWriteContents[selectSideBarIndex](newData)
     }
 
+    // sidebar用ハンバーガーメニュー関連
+    const [isSideBarOpen, setIsSideBarOpen] = useState(false);
+
   return (
     <WorkSpaceContext.Provider
         value={{
           selectSideBarIndex, setSelectSideBarIndex, writeContents, setWriteContents,
           isOpenWriteContentClearBtn, setIsOpenWriteContentClearBtn,
-          isOpenEmotionExample, setIsOpenEmotionExample, selectedEmotion, setSelectedEmotion, addEmotionFromExample
+          isOpenEmotionExample, setIsOpenEmotionExample, selectedEmotion, setSelectedEmotion, addEmotionFromExample,
+          isSideBarOpen, setIsSideBarOpen, 
         }}
     >
         {children}

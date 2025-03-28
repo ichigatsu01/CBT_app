@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button } from '@mui/material';
-import ClearIcon from '@mui/icons-material/Clear';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 const ClearBtn = ({clearBtnStyle}) => {
   const clearExe = () => {
@@ -13,7 +13,7 @@ const ClearBtn = ({clearBtnStyle}) => {
       sx={clearBtnStyle}
       onClick={clearExe}
     >
-      <ClearIcon
+      <DeleteIcon
         sx={{ mr:1 }} />クリア
     </Button>
   )

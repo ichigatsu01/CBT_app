@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext } from 'react'
 import WorkSpaceContext from '../../../context/WorkSpaceContext';
 import { Button, Grid2, IconButton, InputAdornment, OutlinedInput, TextField } from '@mui/material';
 import { Stack } from '@mui/system';
@@ -7,7 +7,6 @@ import DeleteIcon from '@mui/icons-material/Delete';
 const WritingAreaContent2 = () => {
   const {writeContents, setWriteContents,
     selectSideBarIndex, isOpenEmotionExample, setIsOpenEmotionExample,
-    selectedEmotion, 
   } = useContext(WorkSpaceContext);
 
   const addWriteContentRow = () => { //行挿入ボタン用
@@ -36,23 +35,11 @@ const WritingAreaContent2 = () => {
     setWriteContents[selectSideBarIndex](newData);
   }
 
-  // const addEmotionFromExample = () => {
-  //   //何回もstateを呼び出すと非同期処理の副作用で行追加→emotion代入が出来なくなるため、予めwriteContentをコピー
-  //   const newData = [...writeContents[selectSideBarIndex]]
-  //   //現時点のwriteContentに感情欄未入力の行があるかチェックする。あれば空白がある行のindexを、ない場合は-1を返す
-  //   const brankEmotionIndex = newData.findIndex(content => content.emotion == "");
-  //   if (brankEmotionIndex === -1) {//感情欄が空白の行がない
-  //     newData.push({ emotion: selectedEmotion, percent: '' });
-  //   } else {
-  //     newData[brankEmotionIndex].emotion = selectedEmotion
-  //   }
-  //   setWriteContents[selectSideBarIndex](newData)
-  // }
 
   return (
     <>
         <Grid2 sx={{width:'100%', justifyContent:'center'}}>
-          <p>「感情の例」を参考に、どのような気分・感情がどの程度あるかを書いてください。</p>
+          <p>感情欄は「感情の例」ボタンから選択することも可能です。</p>
           <Stack //*行挿入、感情の例ボタン
             direction={'row'} sx={{
               height:'50px', width:'80%', justifyContent:'space-around', marginBottom:'20px', gap:'10px',
@@ -66,10 +53,8 @@ const WritingAreaContent2 = () => {
               variant='contained'
               onClick={()=>setIsOpenEmotionExample(!isOpenEmotionExample)}
             >
-              感情の例</Button>
-            {/* ↓テスト用ボタン↓ */}
-            {/* <Button onClick={()=>addEmotionFromExample()}>test</Button> */}
-            {/* ↑テスト用ボタン↑ */}
+              感情の例
+            </Button>
           </Stack>
           <Grid2 container spacing={{xs:1, md:2}}>
             {writeContents[selectSideBarIndex].map((data, index) => (
@@ -88,6 +73,11 @@ const WritingAreaContent2 = () => {
                     onChange={(e)=> handleEmotionChange(index, e.target.value)}
                   />
                   <OutlinedInput
+                    inputMode='numeric'
+                    inputProps={{
+                      inputMode: 'numeric',
+                      pattern: '[0-9]*'
+                    }}
                     endAdornment={<InputAdornment position="end">%</InputAdornment>}
                     sx={{width:'100px'}}
                     value={data.percent}
