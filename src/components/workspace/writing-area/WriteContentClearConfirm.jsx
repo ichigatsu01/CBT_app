@@ -24,8 +24,8 @@ const WriteContentClearConfirm = () => {
                 この項目の入力内容をクリアしますか？
             </DialogContentText>
             <DialogActions>
-                <Button onClick={() => setIsOpenWriteContentClearBtn(false)}>いいえ</Button>
                 <Button onClick={() => clearContentExe()}>はい</Button>
+                <Button onClick={() => setIsOpenWriteContentClearBtn(false)}>いいえ</Button>
             </DialogActions>
         </DialogContent>
     </Dialog>

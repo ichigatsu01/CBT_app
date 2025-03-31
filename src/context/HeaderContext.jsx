@@ -5,7 +5,7 @@ const HeaderContext = createContext();
 export function HeaderProvider({children}) {
     const [isHelpOpen, setIsHelpOpen] = useState(false); //ヘルプ開閉ボタン
     const [isHamburgerOpen, setIsHamburgerOpen] = useState(false); //ヘッダー開閉ボタン
-    // const [selectSideBarIndex, setSelectSideBarIndex] = useState(0);
+
     const btnStyle = {
         bgcolor: '#43a047',
         transition: 'all 0.5s ease',
@@ -34,10 +34,16 @@ export function HeaderProvider({children}) {
         height: '50px',
     }
 
+    const [ isAllClearOpen, setIsAllClearOpen ] = useState(false); //ファンクションの全体クリアで使用
+
+    const [ allContentsChecker, setAllContentsChecker ] = useState(false);
+    console.log("headerContextです")
+
     return (
     <HeaderContext.Provider
         value={{isHelpOpen, setIsHelpOpen, isHamburgerOpen, setIsHamburgerOpen, btnStyle,
             inputTitleStyle, inputDateStyle, hambugerBtnStyle, clearBtnStyle,
+            isAllClearOpen, setIsAllClearOpen,
         }}
     >
         {children}

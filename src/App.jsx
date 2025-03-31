@@ -7,6 +7,7 @@ import { Stack } from '@mui/material';
 import WriteContentClearConfirm from './components/workspace/writing-area/WriteContentClearConfirm';
 import EmotionExampleText from './components/workspace/writing-area/EmotionExampleText';
 import SideBarHamburgerMenu from './components/workspace/side-bar/SideBarHamburgerMenu';
+import AllClearConfirm from './components/header/header-function/AllClearConfirm';
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
       </Stack>
 
       {/* 以下はボタン式で開閉するダイアログ */}
+      <AllClearConfirm />
       <HelpText />
       <WriteContentClearConfirm />
       <EmotionExampleText />
