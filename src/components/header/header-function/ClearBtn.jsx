@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { Button } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
-import { HeaderContext } from '../../../context/HeaderContext';
+import HeaderContext from '../../../context/HeaderContext';
 
 const ClearBtn = ({clearBtnStyle}) => {
   const { isAllClearOpen, setIsAllClearOpen } = useContext(HeaderContext);

@@ -1,7 +1,7 @@
 import { Button, Dialog, DialogActions, DialogContent, DialogContentText } from '@mui/material'
 import React, { useContext } from 'react'
-import { HeaderContext } from '../../../context/HeaderContext'
-import { WorkSpaceContext } from '../../../context/WorkSpaceContext';
+import HeaderContext from '../../../context/HeaderContext'
+import WorkSpaceContext from '../../../context/WorkSpaceContext';
 
 const AllClearConfirm = () => {
     const { isAllClearOpen, setIsAllClearOpen, } = useContext(HeaderContext);

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { WorkSpaceContext } from '../../../context/WorkSpaceContext';
+import WorkSpaceContext from '../../../context/WorkSpaceContext';
 import { Button, Grid2, IconButton, InputAdornment, OutlinedInput, TextField } from '@mui/material';
 import { Stack } from '@mui/system';
 import DeleteIcon from '@mui/icons-material/Delete';

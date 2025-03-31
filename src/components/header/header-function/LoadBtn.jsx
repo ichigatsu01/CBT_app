@@ -1,16 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Button } from '@mui/material';
 import DownloadIcon from '@mui/icons-material/Download';
+import HeaderContext from '../../../context/HeaderContext';
 
 const LoadBtn = ({btnStyle}) => {
-  const loadExe = () => {
-    console.log('loadBtnが押されました')
-  }
+  const { isLoadOpen, setIsLoadOpen } = useContext(HeaderContext);
   return (
     <Button
       variant='contained'
       sx={btnStyle}
-      onClick={loadExe}
+      onClick={() => setIsLoadOpen(!isLoadOpen)}
     >
       <DownloadIcon sx={{ mr:1 }} />読込
     </Button>

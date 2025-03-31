@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { IconButton } from '@mui/material';
 import FormatListNumberedIcon from '@mui/icons-material/FormatListNumbered';
-import { WorkSpaceContext } from '../../../context/WorkSpaceContext';
+import WorkSpaceContext from '../../../context/WorkSpaceContext';
 
 const SideBarHamburgerBtn = ({hambugerBtnStyle}) => {
     const {isSideBarOpen, setIsSideBarOpen} = useContext(WorkSpaceContext);
@@ -9,7 +9,6 @@ const SideBarHamburgerBtn = ({hambugerBtnStyle}) => {
     return (
     <IconButton sx={hambugerBtnStyle} onClick={() => {
         setIsSideBarOpen(!isSideBarOpen)
-        console.log('sidebar open!')
         }}>
         <FormatListNumberedIcon fontSize='large'/>
     </IconButton>

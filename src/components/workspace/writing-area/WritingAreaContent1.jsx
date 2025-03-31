@@ -1,6 +1,6 @@
 import { Box, Button, Stack, TextField } from '@mui/material'
 import React, { useContext } from 'react'
-import { WorkSpaceContext } from '../../../context/WorkSpaceContext'
+import WorkSpaceContext from '../../../context/WorkSpaceContext'
 
 const WritingAreaContent1 = ({ textFieldStyle }) => {
   const {writeContents, setWriteContents,

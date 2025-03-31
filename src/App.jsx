@@ -9,6 +9,8 @@ import EmotionExampleText from './components/workspace/writing-area/EmotionExamp
 import SideBarHamburgerMenu from './components/workspace/side-bar/SideBarHamburgerMenu';
 import AllClearConfirm from './components/header/header-function/AllClearConfirm';
 import SaveConfirm from './components/header/header-function/SaveConfirm';
+import LoadConfirm from './components/header/header-function/LoadConfirm';
+import SaveError from './components/header/header-function/SaveError';
 
 function App() {
 
@@ -27,6 +29,8 @@ function App() {
 
       {/* 以下はボタン式で開閉するダイアログ */}
       <SaveConfirm />
+      <SaveError />
+      <LoadConfirm />
       <AllClearConfirm />
       <HelpText />
       <WriteContentClearConfirm />

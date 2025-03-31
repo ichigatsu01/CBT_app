@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { WorkSpaceContext } from '../../../context/WorkSpaceContext'
+import WorkSpaceContext from '../../../context/WorkSpaceContext'
 import { Box, Button, Chip, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Divider, useTheme } from '@mui/material';
 
 const EmotionExampleText = () => {

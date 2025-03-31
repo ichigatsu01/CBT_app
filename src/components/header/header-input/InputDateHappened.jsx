@@ -2,11 +2,11 @@ import { TextField } from '@mui/material'
 import React, { useContext } from 'react'
 import HeaderContext from '../../../context/HeaderContext'
 
-const InputDateCreated = ({inputDateStyle}) => {
-  const { setInputDateCreated } = useContext(HeaderContext);
+const InputDateHappened = ({inputDateStyle}) => {
+  const { setInputHappened } = useContext(HeaderContext);
   return (
     <TextField
-        label='作成日'
+        label='経験日'
         type='date'
         variant='filled'
         color='warning'
@@ -14,9 +14,9 @@ const InputDateCreated = ({inputDateStyle}) => {
             inputLabel: {shrink: true}
         }}
         sx={inputDateStyle}
-        onChange={(e) => setInputDateCreated(e.target.value)}
+        onChange={(e) => setInputHappened(e.target.value)}
     />
   )
 }
 
-export default InputDateCreated
+export default InputDateHappened

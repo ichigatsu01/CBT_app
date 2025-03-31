@@ -6,9 +6,9 @@ import HelpBtn from './header-function/HelpBtn'
 import { IconButton, Stack } from '@mui/material'
 import InputTitle from './header-input/InputTitle'
 import InputDateCreated from './header-input/InputDateCreated'
-import InputDateHappend from './header-input/InputDateHappend'
+import InputDateHappened from './header-input/InputDateHappened'
 import HeaderHamburgerBtn from './hamburger-menu/HeaderHamburgerBtn'
-import { HeaderContext } from '../../context/HeaderContext'
+import HeaderContext from '../../context/HeaderContext'
 import SideBarHamburgerBtn from '../workspace/side-bar/SideBarHamburgerBtn'
 import HelpIcon from '@mui/icons-material/Help';
 
@@ -41,7 +41,7 @@ const Header = () => {
             >
               <InputTitle inputTitleStyle={inputTitleStyle}/>
               <InputDateCreated inputDateStyle={inputDateStyle} />
-              <InputDateHappend inputDateStyle={inputDateStyle} />
+              <InputDateHappened inputDateStyle={inputDateStyle} />
           </Stack>
           <Stack //function
             direction='row'
