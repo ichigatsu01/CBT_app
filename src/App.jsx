@@ -8,6 +8,7 @@ import WriteContentClearConfirm from './components/workspace/writing-area/WriteC
 import EmotionExampleText from './components/workspace/writing-area/EmotionExampleText';
 import SideBarHamburgerMenu from './components/workspace/side-bar/SideBarHamburgerMenu';
 import AllClearConfirm from './components/header/header-function/AllClearConfirm';
+import SaveConfirm from './components/header/header-function/SaveConfirm';
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
       </Stack>
 
       {/* 以下はボタン式で開閉するダイアログ */}
+      <SaveConfirm />
       <AllClearConfirm />
       <HelpText />
       <WriteContentClearConfirm />

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { Button } from '@mui/material';
 import HelpIcon from '@mui/icons-material/Help';
-import HeaderContext from '../../../context/HeaderContext';
+import { HeaderContext } from '../../../context/HeaderContext';
 
 const HelpBtn = ({btnStyle}) => {
   const {isHelpOpen, setIsHelpOpen} = useContext(HeaderContext);

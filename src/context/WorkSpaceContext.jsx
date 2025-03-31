@@ -2,7 +2,7 @@ import React, { createContext, useState } from 'react'
 
 const WorkSpaceContext = createContext();
 
-export const WorkSpaceProvider = ({children}) => {
+const WorkSpaceProvider = ({children}) => {
     //content2, content6は感情と割合を入力するため他のcontentと仕様を変えている
     const [selectSideBarIndex, setSelectSideBarIndex] = useState(0);
     const [writeContent0, setWriteContent0] = useState("");
@@ -61,4 +61,4 @@ export const WorkSpaceProvider = ({children}) => {
   )
 }
 
-export default WorkSpaceContext
+export { WorkSpaceContext, WorkSpaceProvider }

@@ -1,6 +1,6 @@
 import { Button, List, Stack } from '@mui/material'
 import React, { useContext } from 'react'
-import WorkSpaceContext from '../../../context/WorkSpaceContext';
+import { WorkSpaceContext } from '../../../context/WorkSpaceContext';
 
 const SideBar = () => {
   const {selectSideBarIndex, setSelectSideBarIndex} = useContext(WorkSpaceContext);

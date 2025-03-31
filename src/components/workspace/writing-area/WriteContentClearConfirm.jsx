@@ -1,6 +1,6 @@
 import { Button, Dialog, DialogActions, DialogContent, DialogContentText } from '@mui/material'
 import React, { useContext } from 'react'
-import WorkSpaceContext from '../../../context/WorkSpaceContext'
+import { WorkSpaceContext } from '../../../context/WorkSpaceContext'
 
 const WriteContentClearConfirm = () => {
     const {setWriteContents,

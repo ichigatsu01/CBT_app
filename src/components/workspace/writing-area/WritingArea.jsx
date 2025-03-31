@@ -7,7 +7,7 @@ import WritingAreaContent3 from './WritingAreaContent3'
 import WritingAreaContent4 from './WritingAreaContent4'
 import WritingAreaContent5 from './WritingAreaContent5'
 import WritingAreaContent6 from './WritingAreaContent6'
-import WorkSpaceContext from '../../../context/WorkSpaceContext';
+import { WorkSpaceContext } from '../../../context/WorkSpaceContext';
 
 const WritingArea = () => {
   const {selectSideBarIndex, setSelectSideBarIndex} = useContext(WorkSpaceContext);

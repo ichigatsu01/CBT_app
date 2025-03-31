@@ -2,7 +2,7 @@ import React, { createContext, useState } from 'react'
 
 const HeaderContext = createContext();
 
-export function HeaderProvider({children}) {
+function HeaderProvider({children}) {
     const [isHelpOpen, setIsHelpOpen] = useState(false); //ヘルプ開閉ボタン
     const [isHamburgerOpen, setIsHamburgerOpen] = useState(false); //ヘッダー開閉ボタン
 
@@ -34,16 +34,14 @@ export function HeaderProvider({children}) {
         height: '50px',
     }
 
+    const [ isSaveOpen, setIsSaveOpen ] = useState(false);
     const [ isAllClearOpen, setIsAllClearOpen ] = useState(false); //ファンクションの全体クリアで使用
-
-    const [ allContentsChecker, setAllContentsChecker ] = useState(false);
-    console.log("headerContextです")
 
     return (
     <HeaderContext.Provider
         value={{isHelpOpen, setIsHelpOpen, isHamburgerOpen, setIsHamburgerOpen, btnStyle,
             inputTitleStyle, inputDateStyle, hambugerBtnStyle, clearBtnStyle,
-            isAllClearOpen, setIsAllClearOpen,
+            isAllClearOpen, setIsAllClearOpen, isSaveOpen, setIsSaveOpen,
         }}
     >
         {children}
@@ -51,4 +49,4 @@ export function HeaderProvider({children}) {
     )
 }
 
-export default HeaderContext
+export { HeaderContext, HeaderProvider }

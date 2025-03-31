@@ -8,7 +8,7 @@ import InputTitle from './header-input/InputTitle'
 import InputDateCreated from './header-input/InputDateCreated'
 import InputDateHappend from './header-input/InputDateHappend'
 import HeaderHamburgerBtn from './hamburger-menu/HeaderHamburgerBtn'
-import HeaderContext from '../../context/HeaderContext'
+import { HeaderContext } from '../../context/HeaderContext'
 import SideBarHamburgerBtn from '../workspace/side-bar/SideBarHamburgerBtn'
 import HelpIcon from '@mui/icons-material/Help';
 

@@ -1,6 +1,6 @@
 import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, } from '@mui/material'
 import React, { useContext } from 'react'
-import HeaderContext from '../../../context/HeaderContext'
+import { HeaderContext } from '../../../context/HeaderContext'
 
 const HelpText = () => {
   const {isHelpOpen, setIsHelpOpen} = useContext(HeaderContext);

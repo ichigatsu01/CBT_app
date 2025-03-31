@@ -1,11 +1,11 @@
 import React, { useContext } from 'react'
-import WorkSpaceContext from '../../../context/WorkSpaceContext'
+import { WorkSpaceContext } from '../../../context/WorkSpaceContext'
 import { Box, Button, Chip, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Divider, useTheme } from '@mui/material';
 
 const EmotionExampleText = () => {
     const {
         isOpenEmotionExample, setIsOpenEmotionExample,
-        writeContents, selectSideBarIndex, selectedEmotion, setSelectedEmotion, addEmotionFromExample
+        setSelectedEmotion, addEmotionFromExample
     } = useContext(WorkSpaceContext);
 
     //MUIのカラーパレットをtheme.paletteで引っ張ってくる

@@ -1,6 +1,6 @@
 import { Button, List, Stack, SwipeableDrawer } from '@mui/material'
 import React, { useContext } from 'react'
-import WorkSpaceContext from '../../../context/WorkSpaceContext';
+import { WorkSpaceContext } from '../../../context/WorkSpaceContext';
 import CloseIcon from '@mui/icons-material/Close';
 
 const SideBarHamburgerMenu = () => {
@@ -16,7 +16,6 @@ const SideBarHamburgerMenu = () => {
     <SwipeableDrawer
       open={isSideBarOpen}
       onClose={() => setIsSideBarOpen(false)
-      // onOpen={() => setIsSideBarOpen(true)}
       }
     anchor='left'>
       <Stack
