@@ -3,7 +3,7 @@ import React, { useContext } from 'react'
 import HeaderContext from '../../../context/HeaderContext'
 
 const InputDateCreated = ({inputDateStyle}) => {
-  const { setInputDateCreated } = useContext(HeaderContext);
+  const { inputDateCreated, setInputDateCreated } = useContext(HeaderContext);
   return (
     <TextField
         label='作成日'
@@ -14,6 +14,7 @@ const InputDateCreated = ({inputDateStyle}) => {
             inputLabel: {shrink: true}
         }}
         sx={inputDateStyle}
+        value={inputDateCreated}
         onChange={(e) => setInputDateCreated(e.target.value)}
     />
   )

@@ -2,9 +2,11 @@ import { TextField } from '@mui/material'
 import React, { useContext } from 'react'
 import HeaderContext from '../../../context/HeaderContext'
 
+
+
 const InputTitle = ({inputTitleStyle}) => {
-  const { setInputTitle } = useContext(HeaderContext);
-  // console.log(inputTitle)
+  const { inputTitle, setInputTitle } = useContext(HeaderContext);
+
   return (
     <div>
       <TextField
@@ -14,6 +16,7 @@ const InputTitle = ({inputTitleStyle}) => {
         variant='filled'
         color='warning'
         sx={inputTitleStyle}
+        value={inputTitle}
         onChange={(e) => setInputTitle(e.target.value)}
       />
     </div>

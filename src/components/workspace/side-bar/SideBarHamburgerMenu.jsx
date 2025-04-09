@@ -34,7 +34,10 @@ const SideBarHamburgerMenu = () => {
             key={index}
             variant='contained'
             color={isSelected ? 'secondary' : 'primary'}
-            onClick={() => handleSideBarClick(index)}
+            onClick={() => {
+              handleSideBarClick(index)
+              setIsSideBarOpen(false)
+            }}
           >
             <List id={index}>{list}</List>
           </Button>)

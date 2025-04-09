@@ -1,26 +1,52 @@
 import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from '@mui/material'
 import React, { useContext } from 'react'
 import HeaderContext from '../../../context/HeaderContext';
+import WorkSpaceContext from '../../../context/WorkSpaceContext';
+// import LoadContentsAll from './LoadContentsAll';
 
 const LoadConfirm = () => {
-    const { isLoadOpen, setIsLoadOpen } = useContext(HeaderContext);
+    const { isLoadConfirmOpen, setIsLoadConfirmOpen, selectedItem, setIsLoadOpen,
+        setInputTitle, setInputDateCreated, setInputHappened,
+    } = useContext(HeaderContext);
+    const { setWriteContents } = useContext(WorkSpaceContext);
+
+    function loadContentsAll() {
+        setInputTitle(selectedItem.title);
+        setInputDateCreated(selectedItem.date_created);
+        setInputHappened(selectedItem.date_happened);
+        setWriteContents[0](selectedItem.content0);
+        setWriteContents[1](selectedItem.content1);
+        setWriteContents[2](selectedItem.content2);
+        setWriteContents[3](selectedItem.content3);
+        setWriteContents[4](selectedItem.content4);
+        setWriteContents[5](selectedItem.content5);
+        setWriteContents[6](selectedItem.content6);
+        console.log("全体読込実行")
+        console.log(selectedItem.title, selectedItem.date_created, selectedItem.date_happened)
+
+    }
+
     return (
         <Dialog
-            open={isLoadOpen}
-            onClose={()=>setIsLoadOpen(false)}
+            open={isLoadConfirmOpen}
+            onClose={()=>setIsLoadConfirmOpen(false)}
             //下二行はスクリーンリーダー対応みたいなもの。
             aria-labelledby="alert-dialog-title"
             aria-describedby="alert-dialog-description"
         >
-            <DialogTitle>読み込みます</DialogTitle>
+            <DialogTitle>指定したコラム表を呼び出しますか？</DialogTitle>
             <DialogContent>
-                <DialogContentText>
-                    SQL画面から保存してるデータリストを呼び出す
+                <DialogContentText color='red'>
+                    ※入力中の内容があれば上書きされます！
                 </DialogContentText>
             </DialogContent>
             <DialogActions>
-                <Button onClick={()=>setIsLoadOpen(false)}>はい</Button>
-                <Button onClick={()=>setIsLoadOpen(false)}>いいえ</Button>
+                <Button onClick={() => {
+                    loadContentsAll()
+                    setIsLoadConfirmOpen(false)
+                    setIsLoadOpen(false)
+                    } }>はい</Button>
+                <Button onClick={() => setIsLoadConfirmOpen(false) }>いいえ</Button>
             </DialogActions>
         </Dialog>
     )

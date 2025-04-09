@@ -43,6 +43,30 @@ function HeaderProvider({children}) {
     const [inputDateCreated, setInputDateCreated] = useState("");
     const [inputHappened, setInputHappened] = useState("");
 
+    //!保存用データの生成 これ使ってない可能性がある
+    // const [saveDataObj, setSaveDataObj] = useState({
+    //     title: "",
+    //     date_created: "",
+    //     date_happened: "",
+    //     content0: "",
+    //     content1: "",
+    //     content2: [{emotion:'', percent:''}],
+    //     content3: "",
+    //     content4: "",
+    //     content5: "",
+    //     content6: [{emotion:'', percent:''}],
+    // })
+
+    // ちょっと名前どうにかしたい
+    // SQLを呼び出すPHPファイルをfetchする関数
+    // *const [ handleLoadSQL, setHandleLoadSQL ] = useState(false); これいらないかも
+    // fetchで呼び出したSQLデータを保存する
+    const [ loadSQLData, setLoadSQLData ] = useState([]);
+    // SQLリストで選ばれたオブジェクトを保存する
+    const [ selectedItem, setSelectedItem ] = useState([]);
+    // loacConfirm.jsxを呼び出す
+    const [ isLoadConfirmOpen, setIsLoadConfirmOpen ] = useState(false);
+
     return (
     <HeaderContext.Provider
         value={{isHelpOpen, setIsHelpOpen, isHamburgerOpen, setIsHamburgerOpen, btnStyle,
@@ -50,6 +74,8 @@ function HeaderProvider({children}) {
             isAllClearOpen, setIsAllClearOpen, isSaveOpen, setIsSaveOpen, isLoadOpen, setIsLoadOpen,
             inputTitle, setInputTitle, inputDateCreated, setInputDateCreated, inputHappened, setInputHappened,
             isSaveErrorOpen, setIsSaveErrorOpen, 
+            loadSQLData, setLoadSQLData, selectedItem, setSelectedItem, isLoadConfirmOpen, setIsLoadConfirmOpen
+            // saveDataObj, setSaveDataObj,
         }}
     >
         {children}

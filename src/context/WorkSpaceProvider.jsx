@@ -44,7 +44,10 @@ const WorkSpaceProvider = ({children}) => {
     }
 
     // sidebar用ハンバーガーメニュー関連
-    const [isSideBarOpen, setIsSideBarOpen] = useState(false);
+    const [ isSideBarOpen, setIsSideBarOpen ] = useState(false);
+
+    // コンテンツ別ヘルプ開閉
+    const [ isSingleHelpOpen, setIsSingleHelpOpen ] = useState(false);
 
     return (
     <WorkSpaceContext.Provider
@@ -52,7 +55,7 @@ const WorkSpaceProvider = ({children}) => {
             selectSideBarIndex, setSelectSideBarIndex, writeContents, setWriteContents,
             isOpenWriteContentClearBtn, setIsOpenWriteContentClearBtn,
             isOpenEmotionExample, setIsOpenEmotionExample, selectedEmotion, setSelectedEmotion, addEmotionFromExample,
-            isSideBarOpen, setIsSideBarOpen, 
+            isSideBarOpen, setIsSideBarOpen, isSingleHelpOpen, setIsSingleHelpOpen,
         }}
     >
         {children}

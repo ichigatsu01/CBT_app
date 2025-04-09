@@ -1,12 +1,12 @@
 import React, { useContext } from 'react'
 import WorkSpaceContext from '../../../context/WorkSpaceContext';
-import { Button, Grid2, IconButton, InputAdornment, OutlinedInput, TextField } from '@mui/material';
-import { Stack } from '@mui/system';
+import { Box, Button, IconButton, Stack, Grid2, InputAdornment, OutlinedInput, TextField } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
+import InfoIcon from '@mui/icons-material/Info';
 
 const WritingAreaContent2 = () => {
   const {writeContents, setWriteContents,
-    selectSideBarIndex, isOpenEmotionExample, setIsOpenEmotionExample,
+    selectSideBarIndex, isOpenEmotionExample, setIsOpenEmotionExample, setIsSingleHelpOpen
   } = useContext(WorkSpaceContext);
 
   const addWriteContentRow = () => { //行挿入ボタン用
@@ -39,7 +39,22 @@ const WritingAreaContent2 = () => {
   return (
     <>
         <Grid2 sx={{width:'100%', justifyContent:'center'}}>
-          <p>感情欄は「感情の例」ボタンから選択することも可能です。</p>
+          <Box>
+              <Stack
+                direction='row'
+                sx={{
+                  justifyContent:'space-between',
+                  alignItems:'center'
+
+                }}
+              >
+                <h3>３：当時の気分・感情</h3>
+                <IconButton onClick={() => setIsSingleHelpOpen(true)}>
+                  <InfoIcon sx={{fontSize:'36px'}}/>
+                </IconButton>
+              </Stack>
+              <p>感情欄は「感情の例」ボタンから選択することも可能です。</p>
+          </Box>
           <Stack //*行挿入、感情の例ボタン
             direction={'row'} sx={{
               height:'50px', width:'80%', justifyContent:'space-around', marginBottom:'20px', gap:'10px',

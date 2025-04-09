@@ -11,6 +11,8 @@ import AllClearConfirm from './components/header/header-function/AllClearConfirm
 import SaveConfirm from './components/header/header-function/SaveConfirm';
 import LoadConfirm from './components/header/header-function/LoadConfirm';
 import SaveError from './components/header/header-function/SaveError';
+import SQLList from './components/header/header-function/SQLList';
+import SingleHelps from './components/workspace/writing-area/SingleHelps';
 
 function App() {
 
@@ -30,11 +32,13 @@ function App() {
       {/* 以下はボタン式で開閉するダイアログ */}
       <SaveConfirm />
       <SaveError />
+      <SQLList />
       <LoadConfirm />
       <AllClearConfirm />
       <HelpText />
       <WriteContentClearConfirm />
       <EmotionExampleText />
+      <SingleHelps />
 
       {/* 以下xs画面で表示するハンバーガーメニュー、サイドバーメニュー */}
       <HeaderHamburgerMenu />
