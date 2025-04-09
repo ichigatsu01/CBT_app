@@ -27,7 +27,8 @@ const SaveConfirm = () => {
       return console.log(element)
     });//確認用。
     //PHPファイルへsaveDataObjを送信
-    fetch("http://localhost/works/cbt_app/save.php", {
+    // fetch("http://localhost/works/cbt_app/save.php", {
+    fetch("https://ichigatsu.sakura.ne.jp/CBT-app/save.php", {
       method: "POST",
       headers:{
         "Content-Type": "application/json"
@@ -49,11 +50,11 @@ const SaveConfirm = () => {
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
     >
-        <DialogTitle>保存します</DialogTitle>
+        <DialogTitle>入力中の内容を保存しますか？</DialogTitle>
         <DialogContent>
-            <DialogContentText>
+            {/* <DialogContentText>
                 ※同名タイトルのものがあると上書きするか確認する
-            </DialogContentText>
+            </DialogContentText> */}
         </DialogContent>
         <DialogActions>
           <Button
@@ -61,7 +62,12 @@ const SaveConfirm = () => {
               saveDataCreate()
               setIsSaveOpen(false)
             }}
-          >OK</Button>
+          >はい</Button>
+          <Button
+            onClick={()=>{
+              setIsSaveOpen(false)
+            }}
+          >いいえ</Button>
         </DialogActions>
     </Dialog>
   )
