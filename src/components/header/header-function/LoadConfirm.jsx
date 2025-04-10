@@ -41,12 +41,12 @@ const LoadConfirm = () => {
                 </DialogContentText>
             </DialogContent>
             <DialogActions>
-                <Button onClick={() => {
+                <Button autoFocus={false} onClick={() => {
                     loadContentsAll()
                     setIsLoadConfirmOpen(false)
                     setIsLoadOpen(false)
                     } }>はい</Button>
-                <Button onClick={() => setIsLoadConfirmOpen(false) }>いいえ</Button>
+                <Button autoFocus={false} onClick={() => setIsLoadConfirmOpen(false) }>いいえ</Button>
             </DialogActions>
         </Dialog>
     )

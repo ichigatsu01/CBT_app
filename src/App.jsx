@@ -13,6 +13,7 @@ import LoadConfirm from './components/header/header-function/LoadConfirm';
 import SaveError from './components/header/header-function/SaveError';
 import SQLList from './components/header/header-function/SQLList';
 import SingleHelps from './components/workspace/writing-area/SingleHelps';
+import DeleteConfirm from './components/header/header-function/DeleteConfirm';
 
 function App() {
 
@@ -34,6 +35,7 @@ function App() {
       <SaveError />
       <SQLList />
       <LoadConfirm />
+      <DeleteConfirm />
       <AllClearConfirm />
       <HelpText />
       <WriteContentClearConfirm />

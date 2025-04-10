@@ -64,8 +64,10 @@ function HeaderProvider({children}) {
     const [ loadSQLData, setLoadSQLData ] = useState([]);
     // SQLリストで選ばれたオブジェクトを保存する
     const [ selectedItem, setSelectedItem ] = useState([]);
-    // loacConfirm.jsxを呼び出す
+    // LoadConfirm.jsxを呼び出す
     const [ isLoadConfirmOpen, setIsLoadConfirmOpen ] = useState(false);
+    // DeleteConfirm.jsxを呼び出す
+    const [ isDeleteConfirmOpen, setIsDeleteConfirmOpen ] = useState(false);
 
     return (
     <HeaderContext.Provider
@@ -74,7 +76,8 @@ function HeaderProvider({children}) {
             isAllClearOpen, setIsAllClearOpen, isSaveOpen, setIsSaveOpen, isLoadOpen, setIsLoadOpen,
             inputTitle, setInputTitle, inputDateCreated, setInputDateCreated, inputHappened, setInputHappened,
             isSaveErrorOpen, setIsSaveErrorOpen, 
-            loadSQLData, setLoadSQLData, selectedItem, setSelectedItem, isLoadConfirmOpen, setIsLoadConfirmOpen
+            loadSQLData, setLoadSQLData, selectedItem, setSelectedItem, isLoadConfirmOpen, setIsLoadConfirmOpen,
+            isDeleteConfirmOpen, setIsDeleteConfirmOpen,
             // saveDataObj, setSaveDataObj,
         }}
     >

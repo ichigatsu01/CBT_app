@@ -5,7 +5,7 @@ import HeaderContext from '../../../context/HeaderContext';
 import { fetchPHPfile } from './fetchPHPfile';
 
 const LoadBtn = ({btnStyle}) => {
-  const { setIsLoadOpen, setLoadSQLData, isHamburgerOpen, setIsHamburgerOpen } = useContext(HeaderContext);
+  const { setIsLoadOpen, setLoadSQLData, setIsHamburgerOpen } = useContext(HeaderContext);
   return (
     <Button
       variant='contained'

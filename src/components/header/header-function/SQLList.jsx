@@ -1,4 +1,4 @@
-import { Button, Dialog, DialogContentText, DialogTitle, Divider, IconButton, List, ListItem, Stack, Typography } from '@mui/material'
+import { Box, Button, Dialog, DialogContentText, DialogTitle, Divider, IconButton, List, ListItem, Stack, Typography } from '@mui/material'
 import React, { useContext } from 'react'
 // import LoadSQLtest from './LoadSQLtest'
 import DownloadIcon from '@mui/icons-material/Download';
@@ -6,8 +6,10 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import HeaderContext from '../../../context/HeaderContext';
 
 const SQLList = () => {
-    const { isLoadOpen, setIsLoadOpen, setSelectedItem, setIsLoadConfirmOpen, loadSQLData } = useContext(HeaderContext);
-  return (
+    const { isLoadOpen, setIsLoadOpen, setSelectedItem, setIsLoadConfirmOpen, loadSQLData,
+        setIsDeleteConfirmOpen
+    } = useContext(HeaderContext);
+    return (
     <>
         <Dialog
             open={isLoadOpen}
@@ -15,15 +17,27 @@ const SQLList = () => {
             //下二行はスクリーンリーダー対応みたいなもの。
             aria-labelledby="alert-dialog-title"
             aria-describedby="alert-dialog-description"
+            sx={{maxWidth:'500px', mx:'auto'}}
         >
             <DialogTitle>
-                読み込む
-                <DownloadIcon sx={{ mx: 0.5 }} />
-                または削除
-                <DeleteIcon sx={{ mx: 0.5 }} />
-                する<br/>データを選んでください
+                <Box sx={{flexWrap:"wrap"}}>
+                    読み込む
+                    <DownloadIcon sx={{ mx: 0.5 }} />
+                    または削除
+                    <DeleteIcon sx={{ mx: 0.5 }} />
+                    するデータを選んでください
+                </Box>
             </DialogTitle>
-            <DialogContentText sx={{marginLeft:'10px'}}>タイトル / 作成日</DialogContentText>
+            <Stack
+                direction='row'
+                sx={{
+                    display:'flex', justifyContent:'space-between', alignItems:'center',
+                    mx:'10px'
+                }}
+            >
+                <DialogContentText sx={{marginLeft:'10px'}}>タイトル / 作成日</DialogContentText>
+                <Button autoFocus={false} onClick={() => setIsLoadOpen(false)}>閉じる</Button>
+            </Stack>
             <List>
                 {
                     loadSQLData.map((item, index) => (
@@ -39,13 +53,13 @@ const SQLList = () => {
                                     }}
                                 >
                                     <Stack
-                                        direction='row'
+                                        direction={{xs:'column', md:'row'}}
                                         spacing={1}
                                         sx={{
                                             flex:'0.7',
                                         }}
                                     >
-                                        {/* 長いタイトルの場合は最初の8文字を表示、とかしないといけないと思う */}
+                                        {/* 長いタイトルの場合は最初の8文字を表示 */}
                                         {item.title.length > 8 ? (
                                             <Typography
                                             sx={{
@@ -77,7 +91,7 @@ const SQLList = () => {
                                         }}
                                         
                                     >
-                                        <IconButton
+                                        <IconButton // 読込ボタン
                                             aria-label="load"
                                             autoFocus={false}
                                             onClick={() => {
@@ -87,7 +101,14 @@ const SQLList = () => {
                                         >
                                             <DownloadIcon fontSize="inherit" />
                                         </IconButton>
-                                        <IconButton aria-label="delete" autoFocus={false}>
+                                        <IconButton // 削除ボタン
+                                            aria-label="delete"
+                                            autoFocus={false}
+                                            onClick={() => {
+                                                setSelectedItem(item)
+                                                setIsDeleteConfirmOpen(true)
+                                            }}
+                                        >
                                             <DeleteIcon fontSize="inherit" />
                                         </IconButton>
                                         {/* <Button variant='contained'>削除</Button> */}
@@ -100,11 +121,6 @@ const SQLList = () => {
                 }
             </List>
         </Dialog>
-        {/* <LoadSQLtest
-            isLoadSqlOpen={isLoadSqlOpen}
-            setIsLoadSqlOpen={setIsLoadSqlOpen}
-            selectedItem={selectedItem}
-        /> */}
     </>
   )
 }
