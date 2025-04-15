@@ -2,7 +2,6 @@ import { Button, Dialog, DialogActions, DialogContent, DialogContentText, Dialog
 import React, { useContext } from 'react'
 import HeaderContext from '../../../context/HeaderContext';
 import WorkSpaceContext from '../../../context/WorkSpaceContext';
-// import LoadContentsAll from './LoadContentsAll';
 
 const LoadConfirm = () => {
     const { isLoadConfirmOpen, setIsLoadConfirmOpen, selectedItem, setIsLoadOpen,
@@ -23,7 +22,6 @@ const LoadConfirm = () => {
         setWriteContents[6](selectedItem.content6);
         console.log("全体読込実行")
         console.log(selectedItem.title, selectedItem.date_created, selectedItem.date_happened)
-
     }
 
     return (

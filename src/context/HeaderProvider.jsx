@@ -68,6 +68,8 @@ function HeaderProvider({children}) {
     const [ isLoadConfirmOpen, setIsLoadConfirmOpen ] = useState(false);
     // DeleteConfirm.jsxを呼び出す
     const [ isDeleteConfirmOpen, setIsDeleteConfirmOpen ] = useState(false);
+    // WriteOutJson.jsxを呼び出す
+    const [ isWriteOutJsonOpen, setIsWriteOutJsonOpen ] = useState(false);
 
     return (
     <HeaderContext.Provider
@@ -77,7 +79,7 @@ function HeaderProvider({children}) {
             inputTitle, setInputTitle, inputDateCreated, setInputDateCreated, inputHappened, setInputHappened,
             isSaveErrorOpen, setIsSaveErrorOpen, 
             loadSQLData, setLoadSQLData, selectedItem, setSelectedItem, isLoadConfirmOpen, setIsLoadConfirmOpen,
-            isDeleteConfirmOpen, setIsDeleteConfirmOpen,
+            isDeleteConfirmOpen, setIsDeleteConfirmOpen, isWriteOutJsonOpen, setIsWriteOutJsonOpen,
             // saveDataObj, setSaveDataObj,
         }}
     >
