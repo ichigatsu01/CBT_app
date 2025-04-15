@@ -14,18 +14,18 @@ const SQLList = () => {
     // JSONファイル書き出し関数
     // const writeOutJson = () => {
         
-        const handleJsonDownload = () => {
+        const handleJsonDownload = (item) => {
             const dataJson = {
-                title: selectedItem.title,
-                date_created: selectedItem.date_created,
-                date_happened: selectedItem.date_happened,
-                content0: selectedItem.content0,
-                content1: selectedItem.content1,
-                content2: selectedItem.content2,
-                content3: selectedItem.content3,
-                content4: selectedItem.content4,
-                content5: selectedItem.content5,
-                content6: selectedItem.content6,
+                title: item.title,
+                date_created: item.date_created,
+                date_happened: item.date_happened,
+                content0: item.content0,
+                content1: item.content1,
+                content2: item.content2,
+                content3: item.content3,
+                content4: item.content4,
+                content5: item.content5,
+                content6: item.content6,
             }
 
             const fileName = (prefix = "cbt") => {
@@ -45,7 +45,7 @@ const SQLList = () => {
             const link = document.createElement("a");
     
             link.href = url;
-            link.download = fileName;
+            link.download = fileName();
             document.body.appendChild(link);
             link.click(); //ユーザによるクリックと同じ反応を誘発
             document.body.removeChild(link);
@@ -162,8 +162,8 @@ const SQLList = () => {
                                             aria-label="JSON"
                                             autoFocus={false}
                                             onClick={() => {
-                                                setSelectedItem(item)
-                                                handleJsonDownload()
+                                                // setSelectedItem(item)
+                                                handleJsonDownload(item)
                                             }}
                                         >
                                             <DataObjectIcon fontSize="inherit" />
