@@ -64,7 +64,7 @@ const SQLList = () => {
             //下二行はスクリーンリーダー対応みたいなもの。
             aria-labelledby="alert-dialog-title"
             aria-describedby="alert-dialog-description"
-            sx={{maxWidth:'500px', mx:'auto'}}
+            sx={{maxWidth:'550px', mx:'auto'}}
         >
             <DialogTitle>
                 <Box sx={{flexWrap:"wrap"}}>
