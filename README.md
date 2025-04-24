@@ -1,12 +1,37 @@
-# React + Vite
+# CBT-app
+認知行動療法のコラム表をアプリ化したものです。
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## デモ
+960px以上/未満がブレークポイントとなっています。
+![desktop](docs/screenshot_1.png)
 
-Currently, two official plugins are available:
+<Image 2> スマホ版の場合、画面構成をコンパクトにするため入力・機能エリアをハンバーガーメニューとしています。
+![desktop](docs/screenshot_2.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 技術スタック
+React, vite, MUI, PHP, MySQL
 
-## Expanding the ESLint configuration
+## 特徴
+- MUIを活用して見やすさ、使いやすさを意識。
+- PHP、MySQLを利用した保存・読込・削除機能を実装。
+- 読込画面に出力機能（jsonファイル）があり、カウンセラーやAI等と共有可能。
+- 当時/現在の感情入力時、別画面で感情名を選択することで入力画面に反映可能。
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ディレクトリ構成(srcディレクトリ以下)
+src
+├─components                # UI部品（画面上部：header, 画面下部：workspace）
+│  ├─header
+│  │  ├─hamburger-menu      # レスポンシブデザイン向け部品
+│  │  ├─header-function     # 保存、読込などの諸機能
+│  │  └─header-input        # コラム表のタイトル、作成日などの共通項目入力欄
+│  └─workspace
+│      ├─side-bar           # コラム表の各欄を表示する
+│      └─writing-area       # テキストの入力エリア
+│          └─single-help    # 各項目に表示するための個別ヘルプ
+├─context                   # Global state (HeaderProvider / WorkSpaceProvider)
+├─App.jsx
+└─main.jsx
+
+### 作成経緯
+自身もカウンセリングでコラム表を作成することがありましたが、紙に手書きで作成していました。
+後日の振り返り、あるいは出来事に遭遇したタイミングで書きたいと感じたことがあり、アプリ化しました。
