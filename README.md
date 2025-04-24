@@ -2,8 +2,8 @@
 認知行動療法(CBT)のコラム表を Web 化し、入力・保存・共有を可能にするアプリ。
 
 ## デモ
-![desktop](docs/screenshot_desktop.png)
-![mobile](docs/screenshot_mobile.png)
+![desktop](docs/screenshot_1.png)
+![mobile](docs/screenshot_2.png)
 
 ## 特徴
 - MUI を利用したレスポンシブ UI（960 px を境に切替）
@@ -23,7 +23,7 @@
 - Vercel へのフロント単体デプロイ
 
 ## セットアップ
-```bash
+```
 # フロントエンド
 git clone https://github.com/ichigatsu01/CBT_app.git
 cd CBT_app
@@ -55,3 +55,6 @@ src
 ### 作成経緯
 自身もカウンセリングでコラム表を作成することがありましたが、紙に手書きで作成していました。
 後日の振り返り、あるいは出来事に遭遇したタイミングで書きたいと感じたことがあり、アプリ化しました。
+
+## License
+MIT © 2025 ichigatsu01
