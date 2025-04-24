@@ -59,4 +59,4 @@ src
 後日の振り返り、あるいは出来事に遭遇したタイミングで書きたいと感じたことがあり、アプリ化しました。
 
 ## License
-MIT © 2025 ichigatsu01
+Apache-2.0 © 2025 ichigatsu01
