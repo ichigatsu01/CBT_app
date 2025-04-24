@@ -38,6 +38,7 @@ php -S localhost:8000  # PHP 開発用サーバ
 ```
 
 ## ディレクトリ構成(srcディレクトリ以下)
+```
 src
 ├─components                # UI部品（画面上部：header, 画面下部：workspace）
 │  ├─header
@@ -51,6 +52,7 @@ src
 ├─context                   # Global state (HeaderProvider / WorkSpaceProvider)
 ├─App.jsx
 └─main.jsx
+```
 
 ### 作成経緯
 自身もカウンセリングでコラム表を作成することがありましたが、紙に手書きで作成していました。
