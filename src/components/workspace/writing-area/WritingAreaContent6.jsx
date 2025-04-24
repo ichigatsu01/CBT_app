@@ -52,7 +52,7 @@ const WritingAreaContent6 = () => {
 
               }}
             >
-              <h3>６：今の気分・感情</h3>
+              <h3>７：今の気分・感情</h3>
               <IconButton onClick={() => setIsSingleHelpOpen(true)}>
                 <InfoIcon sx={{fontSize:'36px'}}/>
               </IconButton>

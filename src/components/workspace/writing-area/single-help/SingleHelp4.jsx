@@ -14,7 +14,7 @@ const SingleHelp4 = () => {
         <DialogContent>
             <DialogContentText>「２：自動思考」とは矛盾することを書いてください。</DialogContentText>
             <DialogContentText>※「２：自動思考」で書いたことは勘違いかも？</DialogContentText>
-            <DialogContentText>と思えるよな事柄を思い返す項目です。</DialogContentText>
+            <DialogContentText>と思えるような事柄を思い返す項目です。</DialogContentText>
             <Divider sx={{my:'10px'}} />
             <DialogContentText>例）</DialogContentText>
             <DialogContentText>上司のチャットは、いつも淡白な気がする</DialogContentText>
