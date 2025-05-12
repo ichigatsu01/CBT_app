@@ -2,8 +2,11 @@
 認知行動療法(CBT)のコラム表を Web 化し、入力・保存・共有を可能にするアプリ。
 
 ## デモ
-![desktop](docs/screenshot_1.png)
-![mobile](docs/screenshot_2.png)
+<p align="top">
+  <img src="docs/screenshot_1.png" width="65%" />
+  <img src="docs/screenshot_2.png" width="20%" />
+</p>
+
 
 ## 特徴
 - MUI を利用したレスポンシブ UI（960 px を境に切替）
